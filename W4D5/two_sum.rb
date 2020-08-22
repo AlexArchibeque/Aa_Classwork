@@ -28,13 +28,14 @@ end
 
 
 
-# def okay_two_sum?(arr,target_sum) # (6 - 1)  5 << 
-#     return false if arr == []
-#     start = arr.shift  # 
-#     tgt_sum = target_sum - start 
-#     arr.each { |el| return true if el == tgt_sum } # n
-#     okay_two_sum?(arr,target_sum) # log_n
-# end
+def okay_two_sum?(arr,target_sum) # (6 - 1)  5 << 
+
+    return false if arr == []
+    start = arr.shift   
+    tgt_sum = target_sum - start 
+    arr.each { |el| return true if el == tgt_sum }
+    okay_two_sum?(arr,target_sum) 
+end
 
 # [1,5]
 
@@ -44,7 +45,7 @@ def okay_two_sum?(arr,target_sum)
     left = arr.shift # 1
     right = arr.pop  # 5
 
-    length.times do
+    while right > left
         if left + right == target_sum # 5+0 == 6
             return true 
         elsif (left + right) > target_sum # 5 > 6
