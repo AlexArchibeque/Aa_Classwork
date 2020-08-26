@@ -1,0 +1,27 @@
+header, aside, section {
+    background: rgba(0,0,0,0.3);
+}
+body{
+    font-family: sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    padding: 20px;
+    display: block;
+}
+
+header > img {
+    width: 100px;
+}
