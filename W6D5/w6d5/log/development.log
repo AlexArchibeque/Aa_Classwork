@@ -2606,3 +2606,235 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 85ms (Views: 57.6ms | ActiveRecord: 26.2ms)
 
 
+Started GET "/cats" for ::1 at 2020-09-04 20:08:01 -0700
+
+ActiveRecord::NoDatabaseError - FATAL:  database "w6d5_development" does not exist
+:
+
+Started POST "/__better_errors/3b380ce2a13f99b9/variables" for ::1 at 2020-09-04 20:08:01 -0700
+  [1m[35m (244.8ms)[0m  [1m[35mCREATE DATABASE "w6d5_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (220.3ms)[0m  [1m[35mCREATE DATABASE "w6d5_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/cats" for ::1 at 2020-09-04 20:08:36 -0700
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/cdf01f798185e0d5/variables" for ::1 at 2020-09-04 20:08:36 -0700
+Started GET "/cats/new" for ::1 at 2020-09-04 20:10:00 -0700
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/2a1205af1e0d233d/variables" for ::1 at 2020-09-04 20:10:00 -0700
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "w6d5_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "w6d5_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying NOT NULL, "description" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200904184927)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-05 03:10:38.350746"], ["updated_at", "2020-09-05 03:10:38.350746"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying NOT NULL, "description" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200904184927)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-05 03:10:38.461699"], ["updated_at", "2020-09-05 03:10:38.461699"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-09-05 03:10:38.468717"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1992-07-10"], ["color", "polka-dot"], ["name", "Tom"], ["sex", "M"], ["description", "He like Jerry"], ["created_at", "2020-09-05 03:10:38.529501"], ["updated_at", "2020-09-05 03:10:38.529501"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1872-01-20"], ["color", "black"], ["name", "Sarah"], ["sex", "F"], ["description", "I am a real cat"], ["created_at", "2020-09-05 03:10:38.539886"], ["updated_at", "2020-09-05 03:10:38.539886"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1756-12-12"], ["color", "white"], ["name", "Megan"], ["sex", "M"], ["description", "I am not a real cat"], ["created_at", "2020-09-05 03:10:38.545661"], ["updated_at", "2020-09-05 03:10:38.545661"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+Started GET "/cats/new" for ::1 at 2020-09-04 20:10:41 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/alex/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2850ms (Views: 2804.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cats" for ::1 at 2020-09-04 20:11:25 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/index.html.erb within layouts/application (237.0ms)
+Completed 200 OK in 654ms (Views: 652.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-09-04 20:11:37 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 436ms (Views: 430.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats" for ::1 at 2020-09-04 20:11:41 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 426ms (Views: 424.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/1/edit" for ::1 at 2020-09-04 20:11:44 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 439ms (Views: 436.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/cats/1" for ::1 at 2020-09-04 20:12:12 -0700
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"Charles", "color"=>"polka-dot", "sex"=>"F", "birth_date"=>"2020-09-04", "description"=>"Hey I want you to be my loving kit kat"}, "id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:41
+  [1m[36mCat Update (0.5ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "sex" = $2, "description" = $3, "birth_date" = $4, "updated_at" = $5 WHERE "cats"."id" = $6[0m  [["name", "Charles"], ["sex", "F"], ["description", "Hey I want you to be my loving kit kat"], ["birth_date", "2020-09-04"], ["updated_at", "2020-09-05 03:12:12.762901"], ["id", 1]]
+  ↳ app/controllers/cats_controller.rb:41
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:41
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 13ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/cats/1" for ::1 at 2020-09-04 20:12:12 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 510ms (Views: 507.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats" for ::1 at 2020-09-04 20:12:20 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 447ms (Views: 446.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-04 20:12:33 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 426ms (Views: 425.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for ::1 at 2020-09-04 20:13:03 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>"Mikaila", "color"=>"orange", "sex"=>"F", "birth_date"=>"2017-03-09", "description"=>"Loves vegan curry"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:25
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2017-03-09"], ["color", "orange"], ["name", "Mikaila"], ["sex", "F"], ["description", "Loves vegan curry"], ["created_at", "2020-09-05 03:13:03.858616"], ["updated_at", "2020-09-05 03:13:03.858616"]]
+  ↳ app/controllers/cats_controller.rb:25
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:25
+Redirected to http://localhost:3000/cats/4
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/cats/4" for ::1 at 2020-09-04 20:13:03 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 464ms (Views: 461.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cats" for ::1 at 2020-09-04 20:13:07 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:7
+  Rendered cats/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 437ms (Views: 435.8ms | ActiveRecord: 0.4ms)
+
+

@@ -1,0 +1,21 @@
+<h1> Create Your Account </h1>
+
+<form action="<%= users_url %>" method="POST"> 
+    <label for="username">Username:
+        <input type="text" name="user[user_name]" value="<%= @user.user_name %>">
+    </label>
+    <br>
+    <label for="email">Email:
+        <input type="text" name="user[email]" value="<%= @user.email %>">
+    </label>
+    <br>
+    <label for="password">Password:
+        <input type="password" name="user[password]" >
+    </label>
+    <br>
+    <label for="submit">
+        <input type="submit" value="Create your account">
+    </label>
+</form>
+
+<!-- params = {user: {email: "", user_name: ""}} -->
