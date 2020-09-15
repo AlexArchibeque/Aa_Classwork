@@ -1,0 +1,13 @@
+<h1>This is the page of <%= @user.username %></h1>
+<br>
+
+<% unless @user.subs.length == 0%>
+    <%= @user.username %> is the Moderator of:
+    <br>
+    <% @user.subs.each do |sub| %>
+        <a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+        <br>
+    <% end %>
+<% end %>
+
+<a href="<%= users_url %>">Back to all users</a>

@@ -1,0 +1,20 @@
+<h1>This is the Subreddit: <%= @sub.title %></h1>
+<br>
+    <h2>Description:<%= @sub.description %></h2>
+<br>
+
+    <form action="<%= new_post_url %>" method="GET">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
+        <input type="hidden" name="post[sub_id]" value="<%= @sub.id %>">
+        <button type="submit">New Post</button>
+    </form>
+<br>
+
+All the posts
+
+<% @sub.posts.each do |post| %>
+ Title: <a href="<%= post_url(post) %>"><%= post.title%></a>
+ <% end %>
+
+<br>
+<a href="<%= subs_url %>">Back to all subreddits</a>

@@ -1,0 +1,8 @@
+<h1>All the subs and their moderators</h1>
+
+<% @subs.each do |sub| %>
+<a href="<%= sub_url(sub) %>"><%= sub.title %></a>
+<br>
+Mod: <%= sub.moderator.username %>
+<br>
+<% end %>
