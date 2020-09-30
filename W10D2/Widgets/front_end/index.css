@@ -1,0 +1,40 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Clock CSS */
+
+#styled{
+    font-family: 'Kufam', cursive;
+    font-size: 46px;
+}
+
+#styled div {
+    color: black;
+}
+
+#styled #inner-div{
+    color: white;
+    border: 2px black solid;
+    padding: 20px;
+    background-color: orange;
+    width: 550px;
+    height: 94px;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+#styled ul{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#styled ul li{
+    display:flex;
+    justify-content: flex-end;
+}
